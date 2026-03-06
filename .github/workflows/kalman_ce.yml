@@ -8,9 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Kalman workflow
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/anandtyagaraj/algo-options/actions/workflows/kalman-trigger.yml/dispatches  \
-            -d '{"ref":"main","inputs":{"option_type":"CE"}}'
+        run:
+          # Just print a message
+          echo "This is a placeholder for the actual API call to trigger the Kalman workflow for CE options."
+        # |
+        # curl -X POST \
+        #   -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+        #   -H "Accept: application/vnd.github.v3+json" \
+        #   https://api.github.com/repos/anandtyagaraj/algo-options/actions/workflows/kalman-trigger.yml/dispatches  \
+        #   -d '{"ref":"main","inputs":{"option_type":"CE"}}'
